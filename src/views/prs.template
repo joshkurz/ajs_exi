@@ -1,0 +1,5 @@
+<ul ng-hide="!prss.length">
+	<li class="row" ng-repeat="prs in prss">
+		<a ng-href="#/prss/{{prs.id}}" ng-bind="prs.fNam"></a>
+	</li>
+</ul>
