@@ -44,7 +44,8 @@ module.exports = (app, dir) ->
 
 		res.json current
 
-
+	# app.get '/prss/', (req, res) ->
+	# 	res.json prss
 
 	app.get '/prss', (req, res) ->
 		res.json prss

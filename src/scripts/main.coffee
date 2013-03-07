@@ -4,6 +4,7 @@ require
 		'controllers/personController'       : deps: ['app', 'services/personService']
 		'controllers/personDetailsController': deps: ['app', 'services/personService']
 		'controllers/prsController'          : deps: ['app', 'services/prsService']
+		'controllers/prsCtr'                 : deps: ['app']
 		'controllers/prsDetailsController'   : deps: ['app', 'services/prsService']
 		'controllers/searchHistoryController': deps: ['app', 'services/messageService']
 		'controllers/twitterController'      : deps: ['app', 'services/twitterService']
@@ -29,6 +30,7 @@ require
 		'controllers/personController'
 		'controllers/personDetailsController'
 		'controllers/prsController'
+		'controllers/prsCtr'
 		'controllers/prsDetailsController'
 		'controllers/searchHistoryController'
 		'controllers/twitterController'

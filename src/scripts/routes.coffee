@@ -18,6 +18,14 @@ angular.module('app').config ['$routeProvider', ($routeProvider) ->
 			]
 
 
+	.when '/prss/',
+		controller: 'prsCtr'
+		reloadOnSearch: true
+		resolve:
+			changeTab: ['$rootScope', ($rootScope) ->
+				$rootScope.$broadcast 'changeTab#prss'
+			]
+
 
 	.when '/prss/:id',
 		controller: 'prsDetailsController'
@@ -26,7 +34,6 @@ angular.module('app').config ['$routeProvider', ($routeProvider) ->
 			changeTab: ['$rootScope', ($rootScope) ->
 				$rootScope.$broadcast 'changeTab#prss'
 			]
-
 
 	.when '/twitter/:searchTerm',
 		controller: 'twitterController'
