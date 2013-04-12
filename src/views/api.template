@@ -1,0 +1,8 @@
+<ul ng-hide="!endpoints.length">
+	<li class="row" ng-repeat="endpoint in endpoints">
+		{{endpoint.href}}
+
+		<a ng-href="{{endpoint.href}}" ng-bind="endpoint.title"></a>
+	</li>
+</ul>
+{{endpoints}}

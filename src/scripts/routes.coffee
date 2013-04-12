@@ -7,8 +7,6 @@ angular.module('app').config ['$routeProvider', ($routeProvider) ->
 			changeTab: ['$rootScope', ($rootScope) ->
 				$rootScope.$broadcast 'changeTab#gitHub'
 			]
-
-
 	.when '/people/:id',
 		controller: 'personDetailsController'
 		reloadOnSearch: true
@@ -16,32 +14,13 @@ angular.module('app').config ['$routeProvider', ($routeProvider) ->
 			changeTab: ['$rootScope', ($rootScope) ->
 				$rootScope.$broadcast 'changeTab#people'
 			]
-
-
-	.when '/prss/',
-		controller: 'prsCtr'
+	.when '/api',
+		controller: 'apiController'
 		reloadOnSearch: true
 		resolve:
 			changeTab: ['$rootScope', ($rootScope) ->
-				$rootScope.$broadcast 'changeTab#prss'
-			]
-
-
-	.when '/prss/:id',
-		controller: 'prsDetailsController'
-		reloadOnSearch: true
-		resolve:
-			changeTab: ['$rootScope', ($rootScope) ->
-				$rootScope.$broadcast 'changeTab#prss'
-			]
-
-	.when '/twitter/:searchTerm',
-		controller: 'twitterController'
-		reloadOnSearch: true
-		resolve:
-			changeTab: ['$rootScope', ($rootScope) ->
-				$rootScope.$broadcast 'changeTab#twitter'
+				$rootScope.$broadcast 'changeTab#api'
 			]
 	.otherwise
-		redirectTo: '/github/CaryLandholt'
+		redirectTo: '/github'
 ]
